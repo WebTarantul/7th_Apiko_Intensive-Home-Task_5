@@ -1,0 +1,64 @@
+.navBarWrapper {
+  display: grid;
+  grid-template-columns: 200px auto;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.list {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &Item {
+    margin: 0;
+    padding: 0;
+
+    a {
+      display: inline-block;
+      padding: 10px 15px;
+      position: relative;
+      z-index: 1;
+      transition: all .5s;
+      text-decoration: none;
+      color: #aaa;
+      font-weight: 800;
+      text-transform: uppercase;
+      &.active{
+        color: #f1c40f;
+      }
+
+      &:hover {
+        color: #91640F;
+
+        &:after {
+          opacity: 1;
+          visibility: visible;
+          height: 100%;
+          transition: all .5s;
+        }
+      }
+
+      &:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        height: 1px;
+        content: '.';
+        color: transparent;
+        background: #F1C40F;
+        visibility: none;
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+
+  }
+}

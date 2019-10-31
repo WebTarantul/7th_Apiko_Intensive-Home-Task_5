@@ -1,0 +1,16 @@
+.ReviewsPageWrapper {
+  margin-top: 20px;
+  display: grid;
+  justify-content: center;
+  input {
+    padding: 10px;
+    color: #aaaaaa;
+    font-size: 16px;
+    font-style: italic;
+    border: 1px solid #f1c40f;
+    &::placeholder{
+      color: #aaaaaa;
+    }
+
+  }
+}
